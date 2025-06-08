@@ -1,0 +1,74 @@
+2025-05-05 22:36:34.747528: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-05-05 22:36:34.757260: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1746477394.768022  947275 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1746477394.771377  947275 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-05-05 22:36:34.781965: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-05 22:36:36.310090: E external/local_xla/xla/stream_executor/cuda/cuda_driver.cc:152] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+Loading Stroke
+Client 0: KL Divergence: -0.0179 | Wasserstein Distance: 0.0000 | Samples 51
+Client 1: KL Divergence: -0.0087 | Wasserstein Distance: 0.0000 | Samples 51
+Client 2: KL Divergence: -0.0179 | Wasserstein Distance: 0.0000 | Samples 51
+Client 3: KL Divergence: 0.0370 | Wasserstein Distance: 0.0000 | Samples 51
+Client 4: KL Divergence: 0.1032 | Wasserstein Distance: 0.0000 | Samples 51
+Client 5: KL Divergence: -0.0179 | Wasserstein Distance: 0.0000 | Samples 51
+Client 6: KL Divergence: 0.0108 | Wasserstein Distance: 0.0000 | Samples 51
+Client 7: KL Divergence: 0.0000 | Wasserstein Distance: 0.0000 | Samples 51
+Client 8: KL Divergence: 0.0681 | Wasserstein Distance: 0.0000 | Samples 51
+Client 9: KL Divergence: -0.0087 | Wasserstein Distance: 0.0000 | Samples 51
+Client 10: KL Divergence: 0.0370 | Wasserstein Distance: 0.0000 | Samples 51
+Client 11: KL Divergence: 0.0000 | Wasserstein Distance: 0.0000 | Samples 51
+Client 12: KL Divergence: -0.0087 | Wasserstein Distance: 0.0000 | Samples 51
+Client 13: KL Divergence: 0.0108 | Wasserstein Distance: 0.0000 | Samples 51
+Client 14: KL Divergence: -0.0087 | Wasserstein Distance: 0.0000 | Samples 51
+Client 15: KL Divergence: -0.0087 | Wasserstein Distance: 0.0000 | Samples 51
+Client 16: KL Divergence: 0.0370 | Wasserstein Distance: 0.0000 | Samples 51
+Client 17: KL Divergence: 0.0681 | Wasserstein Distance: 0.0000 | Samples 51
+Client 18: KL Divergence: -0.0087 | Wasserstein Distance: 0.0000 | Samples 51
+Client 19: KL Divergence: -0.0179 | Wasserstein Distance: 0.0000 | Samples 51
+Saved valid data
+Splitting Feature imbalance
+Even split wrt the samples
+
+Mid_point0 : 4.04
+Client 0: KL Divergence: -0.0327 | Wasserstein Distance: 0.0000 | Samples 346
+Mid_point1 : 12.00
+Client 1: KL Divergence: -0.0160 | Wasserstein Distance: 0.0000 | Samples 293
+Mid_point2 : 19.50
+Client 2: KL Divergence: -0.0345 | Wasserstein Distance: 0.0000 | Samples 321
+Mid_point3 : 26.50
+Client 3: KL Divergence: -0.0434 | Wasserstein Distance: 0.0000 | Samples 311
+Mid_point4 : 33.00
+Client 4: KL Divergence: -0.0265 | Wasserstein Distance: 0.0000 | Samples 306
+Mid_point5 : 38.50
+Client 5: KL Divergence: -0.0823 | Wasserstein Distance: 0.0000 | Samples 290
+Mid_point6 : 43.54
+Client 6: KL Divergence: -0.1322 | Wasserstein Distance: 0.0000 | Samples 310
+Mid_point7 : 48.04
+Client 7: KL Divergence: -0.1084 | Wasserstein Distance: 0.0000 | Samples 324
+Mid_point8 : 51.50
+Client 8: KL Divergence: -0.0354 | Wasserstein Distance: 0.0000 | Samples 308
+Mid_point9 : 54.50
+Client 9: KL Divergence: 0.0059 | Wasserstein Distance: 0.0000 | Samples 302
+Mid_point10 : 57.41
+Client 10: KL Divergence: 0.3187 | Wasserstein Distance: 0.0000 | Samples 309
+Mid_point11 : 59.91
+Client 11: KL Divergence: 0.1150 | Wasserstein Distance: 0.0000 | Samples 329
+Mid_point12 : 62.58
+Client 12: KL Divergence: 0.1417 | Wasserstein Distance: 0.0000 | Samples 293
+Mid_point13 : 66.08
+Client 13: KL Divergence: 0.1459 | Wasserstein Distance: 0.0000 | Samples 321
+Mid_point14 : 69.72
+Client 14: KL Divergence: 0.3491 | Wasserstein Distance: 0.0000 | Samples 301
+Mid_point15 : 73.15
+Client 15: KL Divergence: 0.4385 | Wasserstein Distance: 0.0000 | Samples 311
+Mid_point16 : 75.93
+Client 16: KL Divergence: 0.4435 | Wasserstein Distance: 0.0000 | Samples 321
+Mid_point17 : 77.81
+Client 17: KL Divergence: 0.6191 | Wasserstein Distance: 0.0000 | Samples 301
+Mid_point18 : 79.31
+Client 18: KL Divergence: 0.4806 | Wasserstein Distance: 0.0000 | Samples 373
+Mid_point19 : 81.00
+Client 19: KL Divergence: 0.4285 | Wasserstein Distance: 0.0000 | Samples 249
+Saved train data

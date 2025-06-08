@@ -1,0 +1,44 @@
+2025-05-06 08:17:13.921042: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-05-06 08:17:13.929796: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1746512233.940288 1629072 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1746512233.943607 1629072 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-05-06 08:17:13.954057: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-05-06 08:17:15.106392: E external/local_xla/xla/stream_executor/cuda/cuda_driver.cc:152] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+Loading Stroke
+Client 0: KL Divergence: -0.0150 | Wasserstein Distance: 0.0000 | Samples 102
+Client 1: KL Divergence: 0.0001 | Wasserstein Distance: 0.0000 | Samples 102
+Client 2: KL Divergence: 0.0232 | Wasserstein Distance: 0.0000 | Samples 102
+Client 3: KL Divergence: -0.0150 | Wasserstein Distance: 0.0000 | Samples 102
+Client 4: KL Divergence: 0.0232 | Wasserstein Distance: 0.0000 | Samples 102
+Client 5: KL Divergence: -0.0087 | Wasserstein Distance: 0.0000 | Samples 102
+Client 6: KL Divergence: 0.0001 | Wasserstein Distance: 0.0000 | Samples 102
+Client 7: KL Divergence: -0.0087 | Wasserstein Distance: 0.0000 | Samples 102
+Client 8: KL Divergence: 0.0520 | Wasserstein Distance: 0.0000 | Samples 102
+Client 9: KL Divergence: -0.0150 | Wasserstein Distance: 0.0000 | Samples 102
+Saved valid data
+Splitting Feature imbalance
+Even split wrt the samples
+
+Mid_point0 : 8.04
+Client 0: KL Divergence: -0.0256 | Wasserstein Distance: 0.0000 | Samples 639
+Mid_point1 : 23.00
+Client 1: KL Divergence: -0.0390 | Wasserstein Distance: 0.0000 | Samples 632
+Mid_point2 : 35.50
+Client 2: KL Divergence: -0.0589 | Wasserstein Distance: 0.0000 | Samples 596
+Mid_point3 : 45.50
+Client 3: KL Divergence: -0.1344 | Wasserstein Distance: 0.0000 | Samples 634
+Mid_point4 : 53.00
+Client 4: KL Divergence: -0.0156 | Wasserstein Distance: 0.0000 | Samples 610
+Mid_point5 : 58.50
+Client 5: KL Divergence: 0.2087 | Wasserstein Distance: 0.0000 | Samples 638
+Mid_point6 : 64.50
+Client 6: KL Divergence: 0.1439 | Wasserstein Distance: 0.0000 | Samples 614
+Mid_point7 : 71.43
+Client 7: KL Divergence: 0.3939 | Wasserstein Distance: 0.0000 | Samples 612
+Mid_point8 : 76.74
+Client 8: KL Divergence: 0.5267 | Wasserstein Distance: 0.0000 | Samples 622
+Mid_point9 : 80.31
+Client 9: KL Divergence: 0.4595 | Wasserstein Distance: 0.0000 | Samples 622
+Saved train data

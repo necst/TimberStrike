@@ -1,0 +1,31 @@
+Depth,System,Accuracy,Train F1,Train AUC,Baseline Accuracy
+3,NVFlare,65.81,0.643,0.817,60.57
+4,NVFlare,66.01,0.676,0.834,60.2
+5,NVFlare,67.38,0.639,0.821,61.97
+6,NVFlare,67.87,0.636,0.831,63.79
+7,NVFlare,64.41,0.627,0.832,63.26
+8,NVFlare,65.94,0.66,0.825,63.84
+3,FedXGBLLR,68.2,0.587,0.816,63.82
+4,FedXGBLLR,66.36,0.603,0.806,60.57
+5,FedXGBLLR,66.61,0.572,0.81,63.00
+6,FedXGBLLR,67.42,0.531,0.806,64.7
+7,FedXGBLLR,65.94,0.607,0.809,64.52
+8,FedXGBLLR,67.14,0.582,0.814,64.24
+3,Flower XGBoost Bagging,57.56,0.638,0.769,59.85
+4,Flower XGBoost Bagging,58.02,0.587,0.743,62.34
+5,Flower XGBoost Bagging,62.05,0.577,0.716,61.55
+6,Flower XGBoost Bagging,64.81,0.506,0.689,62.71
+7,Flower XGBoost Bagging,64.03,0.537,0.703,63.32
+8,Flower XGBoost Bagging,56.61,0.585,0.718,63.32
+3,Flower XGBoost Cyclic,54.45,0.573,0.753,57.07
+4,Flower XGBoost Cyclic,59.74,0.506,0.669,64.2
+5,Flower XGBoost Cyclic,59.82,0.49,0.669,61.93
+6,Flower XGBoost Cyclic,58.29,0.591,0.755,62.83
+7,Flower XGBoost Cyclic,60.35,0.549,0.719,63.85
+8,Flower XGBoost Cyclic,62.7,0.529,0.679,64.38
+3,FedTree,71.74,0.586,0.81,63.08
+4,FedTree,72.74,0.596,0.826,63.21
+5,FedTree,72.51,0.606,0.798,65.98
+6,FedTree,73.27,0.604,0.805,66.16
+7,FedTree,73.03,0.604,0.806,67.35
+8,FedTree,73.37,0.61,0.815,67.46

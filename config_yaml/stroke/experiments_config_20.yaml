@@ -1,0 +1,41 @@
+## Global Configuration
+baseline: False # whether to run the baseline experiment
+num_clients: 20
+num_rounds: 100
+force_partition: False
+force_training: False
+force_attack: False
+xgb_param:
+  eta: 0.3
+  gamma: 0
+  max_depth: $MD_PLACEHOLDER$
+  lambda: 1
+log_dir: "results"
+data: "stroke"
+data_path: "./dataset_partitioner/healthcare-dataset-stroke-prep.csv"
+niid_type: "feature"
+alpha: 0.3 # alpha for non-iid data partitioning, smaller alpha means more "non-iidness"
+victim_cid: 0
+compromised_cid: 2
+evaluation_step: 200 # evaluate the model every 5 rounds
+tolerance: 0.319 # tolerance for the attack evaluation
+to_drop: [] # fn = ["age", "avg_glucose_level", "bmi", "gender", "hypertension", "heart_disease", "ever_married", "work_type", "Residence_type", "smoking_status"]
+
+## System Specific Configuration
+nvflare:
+  skip: True
+
+fedtree:
+  skip: False
+
+fedxgbllr:
+  skip: True
+  path: "utils/fedxgbllr"
+
+cyclic:
+  skip: True
+  path: "utils/cyclic"
+
+bagging:
+  skip: True
+  path: "utils/bagging"

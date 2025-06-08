@@ -1,0 +1,15 @@
+task_type: "BINARY"
+
+metric:
+  name: "F1"
+  fn:
+    _target_: torchmetrics.F1Score
+    task: "binary"
+    average: "macro"
+
+criterion:
+  _target_: torch.nn.BCELoss
+
+xgb:
+  _target_:  xgboost.XGBClassifier
+  objective: "binary:logistic"

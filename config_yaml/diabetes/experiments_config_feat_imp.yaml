@@ -1,0 +1,41 @@
+## Global Configuration
+baseline: False # whether to run the baseline experiment
+num_clients: 3
+num_rounds: 100
+force_partition: False
+force_training: False
+force_attack: False
+xgb_param:
+  eta: 0.3
+  gamma: 0
+  max_depth: $MD_PLACEHOLDER$
+  lambda: 1
+log_dir: "results"
+data: "diabetes"
+data_path: "./dataset_partitioner/diabetes/diabetes-prep.csv"
+niid_type: "sample"
+alpha: 0.3 # alpha for non-iid data partitioning, smaller alpha means more "non-iidness"
+victim_cid: 0
+compromised_cid: 2
+evaluation_step: 200 # evaluate the model every 5 rounds
+tolerance: 0.319 # tolerance for the attack evaluation
+to_drop: ["Pregnancies", "BloodPressure", "SkinThickness", "Insulin"]
+
+## System Specific Configuration
+nvflare:
+  skip: False
+
+fedtree:
+  skip: False
+
+fedxgbllr:
+  skip: False
+  path: "utils/fedxgbllr"
+
+cyclic:
+  skip: False
+  path: "utils/cyclic"
+
+bagging:
+  skip: False
+  path: "utils/bagging"

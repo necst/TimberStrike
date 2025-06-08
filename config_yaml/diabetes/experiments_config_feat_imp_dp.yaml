@@ -1,0 +1,45 @@
+## Global Configuration
+baseline: False # whether to run the baseline experiment
+num_clients: 3
+num_rounds: 100
+force_partition: False
+force_training: False
+force_attack: False
+xgb_param:
+  eta: 0.3
+  gamma: 0
+  max_depth: $MD_PLACEHOLDER$
+  lambda: 1
+log_dir: "results"
+data: "diabetes"
+data_path: "./dataset_partitioner/diabetes/diabetes-prep.csv"
+niid_type: "sample"
+alpha: 0.3 # alpha for non-iid data partitioning, smaller alpha means more "non-iidness"
+victim_cid: 0
+compromised_cid: 2
+evaluation_step: 200 # evaluate the model every 5 rounds
+tolerance: 0.319 # tolerance for the attack evaluation
+to_drop: ["Pregnancies", "BloodPressure", "SkinThickness", "Insulin"]
+differential_privacy:
+  epsilon: $DP_PLACEHOLDER$
+
+## System Specific Configuration
+nvflare:
+  skip: True
+
+fedtree:
+  skip: False
+  differential_privacy:
+    epsilon: $FT_PLACEHOLDER$ # for FedTree, DP is applied during gradient sharing, and the privacy budget is shared among all trees, levels, and internal nodes
+
+fedxgbllr:
+  skip: True
+  path: "utils/fedxgbllr"
+
+cyclic:
+  skip: True
+  path: "utils/cyclic"
+
+bagging:
+  skip: True
+  path: "utils/bagging"

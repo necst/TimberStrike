@@ -1,0 +1,4 @@
+outputs/
+conf/clients/*
+conf/dataset/*
+!conf/dataset/task/

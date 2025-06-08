@@ -1,0 +1,12 @@
+[submodule "src/googletest"]
+	path = src/test/googletest
+	url = https://github.com/google/googletest
+#[submodule "cub"]
+#	path = cub
+#	url = https://github.com/NVlabs/cub.git
+[submodule "thrust"]
+	path = thrust
+	url = https://github.com/NVIDIA/thrust.git
+[submodule "CGBN"]
+	path = CGBN
+	url = https://github.com/QinbinLi/CGBN.git
