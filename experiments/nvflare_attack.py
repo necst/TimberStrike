@@ -13,7 +13,7 @@ def nvflare_attack(log_path: str, args: dict, data: list, data_config: dict, for
     create_log(log_path)
 
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    nvflare_dir = os.path.join(current_dir, '..', 'frameworks', 'NVFlare', 'xgboost', 'workspaces')
+    nvflare_dir = os.path.join(current_dir, '..', 'fl_systems', 'frameworks', 'NVFlare', 'xgboost', 'workspaces')
 
     name = f"xgboost_workspace_{args['num_clients']}"
     workspace = [f.path for f in os.scandir(nvflare_dir) if f.is_dir() and name in f.name][0]

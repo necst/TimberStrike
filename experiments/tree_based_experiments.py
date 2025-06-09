@@ -35,8 +35,8 @@ class TreeBasedPipeline:
         dataset, clients = fedxgbllr_config(args, defense=defense)
 
         try:
-            os.chdir('utils')
-            sys.argv = ['utils/fedxgbllr/main.py', f'dataset={dataset}', f'clients={clients}']
+            os.chdir('fl_systems/utils')
+            sys.argv = ['fl_systems/utils/fedxgbllr/main.py', f'dataset={dataset}', f'clients={clients}']
             sys.path.append(os.getcwd())
 
             log_file = os.path.join(original_cwd, log_file)
@@ -54,7 +54,7 @@ class TreeBasedPipeline:
 
     @skip_training_if_not_forced
     def train_bagging(self, log_file: str, args, defense=False):
-        command = ['utils/bagging/run.sh', str(args["num_clients"]), str(args["num_rounds"])]
+        command = ['fl_systems/utils/bagging/run.sh', str(args["num_clients"]), str(args["num_rounds"])]
 
         bagging_cyclic_config('bagging', args, defense)  # PASS DATA_DP or DATA based on defense, use abs path
 
@@ -65,7 +65,7 @@ class TreeBasedPipeline:
 
     @skip_training_if_not_forced
     def train_cyclic(self, log_file: str, args, defense=False):
-        command = ['utils/cyclic/run.sh', str(args["num_clients"]), str(args["num_rounds"] * args["num_clients"])] # num_rounds * num_clients = total rounds, so that each client gets to train num_rounds trees
+        command = ['fl_systems/utils/cyclic/run.sh', str(args["num_clients"]), str(args["num_rounds"] * args["num_clients"])] # num_rounds * num_clients = total rounds, so that each client gets to train num_rounds trees
 
         bagging_cyclic_config('cyclic', args, defense)  # PASS DATA_DP or DATA based on defense, use abs path
 

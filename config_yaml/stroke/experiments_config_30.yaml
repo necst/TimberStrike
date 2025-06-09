@@ -30,12 +30,12 @@ fedtree:
 
 fedxgbllr:
   skip: True
-  path: "utils/fedxgbllr"
+  path: "fl_systems/utils/fedxgbllr"
 
 cyclic:
   skip: True
-  path: "utils/cyclic"
+  path: "fl_systems/utils/cyclic"
 
 bagging:
   skip: True
-  path: "utils/bagging"
+  path: "fl_systems/utils/bagging"

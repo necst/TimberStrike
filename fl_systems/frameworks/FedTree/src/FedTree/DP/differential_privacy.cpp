@@ -114,7 +114,7 @@ void DifferentialPrivacy::add_noise_clip_gradient(float_type &value) {
 
     // Calculate Laplace noise scale based on privacy budget and gradient sensitivity
     float_type sensitivity = 2 * clip_threshold;
-    float_type noise_scale = sensitivity / this->privacy_budget_per_tree;
+    float_type noise_scale = sensitivity / this->privacy_budget_leaf_nodes;
 
     // Generate Laplace noise
     std::random_device device;
@@ -131,7 +131,7 @@ void DifferentialPrivacy::add_noise_clip_gradient(float_type &value) {
 void DifferentialPrivacy::add_noise_gradient(float_type &value, float_type min_gradient, float_type max_gradient) const {
     // Add noise without clipping
     const float_type sensitivity = max_gradient - min_gradient;
-    const float_type noise_scale = sensitivity / this->privacy_budget_per_tree;
+    const float_type noise_scale = sensitivity / this->privacy_budget_leaf_nodes;
 
     // Generate Laplace noise
     std::random_device device;

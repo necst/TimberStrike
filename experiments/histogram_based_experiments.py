@@ -30,11 +30,11 @@ class HistBasedPipeline:
         fedtree_config(args, defense=defense)
 
         sys.argv = [
-            os.path.join(cwd, '..', 'frameworks', 'FedTree', 'run.sh'), str(args["num_clients"]), str(args["data"])
+            os.path.join(cwd, '..', 'fl_systems', 'frameworks', 'FedTree', 'run.sh'), str(args["num_clients"]), str(args["data"])
         ]
 
         with open(log_file, 'w') as f:
-            os.chmod(os.path.join(cwd, '..', 'frameworks', 'FedTree', 'run.sh'), 0o755)
+            os.chmod(os.path.join(cwd, '..', 'fl_systems', 'frameworks', 'FedTree', 'run.sh'), 0o755)
             subprocess.run(sys.argv, stdout=f, stderr=f)
 
     @skip_training_if_not_forced
@@ -52,10 +52,10 @@ class HistBasedPipeline:
             dataset_path = os.path.abspath(os.path.join(cwd, '..', 'data', args["data"], f'nc_{args["num_clients"]}', 'data'))
 
         sys.argv = [
-            os.path.join(cwd, '..', 'frameworks', 'NVFlare', 'xgboost', 'run.sh'), str(args["num_clients"]), str(eta), str(gamma),
+            os.path.join(cwd, '..', 'fl_systems', 'frameworks', 'NVFlare', 'xgboost', 'run.sh'), str(args["num_clients"]), str(eta), str(gamma),
             str(lambda_), str(max_depth), str(num_rounds), dataset_path
         ]
 
         with open(log_file, 'w') as f:
-            os.chmod(os.path.join(cwd, '..', 'frameworks', 'NVFlare', 'xgboost', 'run.sh'), 0o755)
+            os.chmod(os.path.join(cwd, '..', 'fl_systems', 'frameworks', 'NVFlare', 'xgboost', 'run.sh'), 0o755)
             subprocess.run(sys.argv, stdout=f, stderr=f)

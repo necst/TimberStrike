@@ -9,8 +9,8 @@ from xgboost_reconstruction.xgboost_utils import GenericXGBoostInfo
 
 
 def fedtree_config(args, defense: bool = False):
-    fedtree_directory: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "frameworks", "FedTree")
-    data_directory = os.path.join(fedtree_directory, "..", "..", "data", args['data'], f"nc_{args['num_clients']}", "data")
+    fedtree_directory: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "fl_systems", "frameworks", "FedTree")
+    data_directory = os.path.join(fedtree_directory, "..", "..", "..", "data", args['data'], f"nc_{args['num_clients']}", "data")
     config = json.load(open(os.path.join(data_directory, "config", "config.json")))
 
     custom_directory: str = os.path.join(fedtree_directory, "dataset", config["data"])  # dataset/__NAME__
@@ -191,7 +191,7 @@ def fedtree_create_dataframe(structure, xgb_info):
 def fedtree_tree_dfs(args: dict, data_config: dict, defense=False) -> tuple[list[pd.DataFrame], GenericXGBoostInfo]:
     params = {}
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    fedtree_dir = os.path.join(current_dir, "..", "frameworks", "FedTree", "client_messages")
+    fedtree_dir = os.path.join(current_dir, "..", "fl_systems", "frameworks", "FedTree", "client_messages")
     with open(os.path.join(fedtree_dir, "params_0.txt"), "r") as file:
         for line in file:
             if line.strip() == "":

@@ -12,8 +12,9 @@ This repository contains the code for the experiments in the paper **"TimberStri
 ├── dataset_partitioner/       # Logic for simulating client-side data partitioning
 ├── Dockerfile                 # Docker container configuration
 ├── experiments/               # Training and attack workflow implementations
-├── frameworks/                # Federated frameworks: FedTree (v1.0.5, latest) and NVFlare (v2.5)
-├── utils/                     # Federated XGBoost with Flower (e.g., bagging, cyclic, FedXGBllr)
+├── fl_systems/                # Federated learning systems integration
+│   ├── frameworks/            # Included frameworks: FedTree (v1.0.5, latest) and NVFlare (v2.5)
+│   └── utils/                 # Federated XGBoost via Flower (i.e., bagging, cyclic, FedXGBllr)
 ├── paper_visualization/       # Scripts for generating plots and figures used in the paper
 ├── pyproject.toml             # Project metadata and dependencies (managed via Poetry)
 ├── results/                   # Output directory for logs and experiment results
@@ -84,7 +85,7 @@ poetry shell
 
 ### 🧱 Building FedTree
 
-To build the FedTree library, refer to the instructions in the [FedTree](FedTree/) directory. It contains the original README from the upstream project.
+To build the FedTree library, refer to the instructions in the [FedTree](fl_systems/frameworks/FedTree/) directory. It contains the original README from the upstream project.
 
 > **Note**: Some modules may require additional dependencies. Please consult the README files inside each respective subdirectory for detailed instructions.
 

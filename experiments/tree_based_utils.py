@@ -147,7 +147,7 @@ def fedxgbllr_config(args: dict, defense: bool = False) -> tuple[str, str]:
     config = json.load(open(os.path.join(data_dir, 'config', 'config.json')))
     dataset = config['data']
 
-    fexgbllr_dir = os.path.join(current_dir, '..', 'utils', 'fedxgbllr')
+    fexgbllr_dir = os.path.join(current_dir, '..', 'fl_systems', 'utils', 'fedxgbllr')
     conf_dir = os.path.join(fexgbllr_dir, 'conf')
 
     # create a yaml file in conf/dataset called dataset.yaml
@@ -174,7 +174,7 @@ def fedxgbllr_config(args: dict, defense: bool = False) -> tuple[str, str]:
 def bagging_cyclic_config(dir: str, args: dict, defense: bool = False):
     current_dir = os.path.dirname(os.path.abspath(__file__))
 
-    dir = os.path.join(current_dir, '..', 'utils', dir)
+    dir = os.path.join(current_dir, '..', 'fl_systems', 'utils', dir)
 
     xgb_param = {
         "objective": "binary:logistic",
