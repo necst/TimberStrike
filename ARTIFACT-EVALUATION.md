@@ -25,6 +25,6 @@ From an ethical standpoint, this research was conducted with a strong commitment
 The artifact is publicly available at the following GitHub repository:
 
 > [https://github.com/necst/TimberStrike](https://github.com/necst/TimberStrike)
-> Commit evaluated: [a37eb0a71dfe0c28561fa45c65b473ed6c112407](https://github.com/necst/TimberStrike/commit/a37eb0a71dfe0c28561fa45c65b473ed6c112407)
+> Commit evaluated: [cf971102a2fce2721d80084f4b46730cd9044a5d](https://github.com/necst/TimberStrike/commit/cf971102a2fce2721d80084f4b46730cd9044a5d)
 
 If the repository is updated in response to reviewer feedback, a new commit ID or tag will be provided in the comment to maintain traceability.
