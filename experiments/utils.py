@@ -15,7 +15,7 @@ from sklearn.manifold import TSNE
 from sympy import pprint
 
 from experiments.tree_based_utils import PartitionType
-from xgboost_reconstruction import Experiment, Database, match_reconstruction
+from xgboost_reconstruction import Attack, Database, match_reconstruction
 
 
 class PartitionArgs:

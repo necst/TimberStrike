@@ -66,7 +66,7 @@ def get_result(dataset, final_df):
     return distances
 
 
-class Experiment:
+class Attack:
     def __init__(self, data: pd.DataFrame,
                  target: pd.DataFrame,
                  fn: list[str],
@@ -79,7 +79,7 @@ class Experiment:
                  to_drop=None, tolerance=0.1,
                  force=False,
                  baseline=False):
-        """ Experiment class to run reconstruction attack on a given dataset
+        """ Utility class to run reconstruction attack on a given dataset
 
         :param data: The data to be reconstructed
         :param target: The target of the data

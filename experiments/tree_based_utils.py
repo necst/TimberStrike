@@ -18,7 +18,7 @@ from xgboost import XGBClassifier
 
 from xgboost_reconstruction import RecoverXGBClassifier, DatabaseReconstructor, database_to_final_dataframe, \
     match_reconstruction, Database
-from xgboost_reconstruction.run_experiment import get_result, tsne_plot, evaluate_attack
+from xgboost_reconstruction.run_attack import get_result, tsne_plot, evaluate_attack
 
 
 class PartitionType:

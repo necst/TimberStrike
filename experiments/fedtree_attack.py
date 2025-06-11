@@ -6,7 +6,7 @@ import pandas as pd
 
 from experiments.histogram_based_utils import fedtree_tree_dfs
 from experiments.tree_based_utils import create_log, extract_categorical_features, extract_numerical_features
-from xgboost_reconstruction import Experiment
+from xgboost_reconstruction import Attack
 
 
 def fedtree_attack(log_path: str, args: dict, data: list, data_config: dict, force_attack: bool = False):
@@ -22,7 +22,7 @@ def fedtree_attack(log_path: str, args: dict, data: list, data_config: dict, for
         nClients = len(data)
         thresholds = [10000]
 
-        experiment = Experiment(
+        experiment = Attack(
             data=x,
             target=y,
             fn=fn,

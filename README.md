@@ -14,7 +14,7 @@ This repository contains the code for the experiments in the paper **"TimberStri
 ├── experiments/               # Training and attack workflow implementations
 ├── fl_systems/                # Federated learning systems integration
 │   ├── frameworks/            # Included frameworks: FedTree (v1.0.5, latest) and NVFlare (v2.5)
-│   └── utils/                 # Federated XGBoost via Flower (i.e., bagging, cyclic, FedXGBllr)
+│   └── utils/                 # Federated XGBoost using the Flower library (i.e., bagging, cyclic, FedXGBllr)
 ├── paper_visualization/       # Scripts for generating plots and figures used in the paper
 ├── pyproject.toml             # Project metadata and dependencies (managed via Poetry)
 ├── results/                   # Output directory for logs and experiment results
@@ -52,7 +52,7 @@ docker run --rm \
   --env-file .env \
   -v $(pwd)/results:/app/results \
   -v $(pwd)/data:/app/data \
-  timberstrike ./run_stroke.sh
+  timberstrike ./run.sh
 ```
 
 This command mounts the local `results/` directory into the container and executes the `run_stroke.sh` experiment script.
@@ -85,7 +85,11 @@ poetry shell
 
 ### 🧱 Building FedTree
 
-To build the FedTree library, refer to the instructions in the [FedTree](fl_systems/frameworks/FedTree/) directory. It contains the original README from the upstream project.
+To build the FedTree framework, refer to the instructions in the [FedTree](fl_systems/frameworks/FedTree/) directory. It contains the original README from the upstream project.
+
+### 🧱 Building NVFlare
+
+To build NVFlare, refer to the instructions in the [NVFlare XGBoost](fl_systems/frameworks/NVFlare/xgboost) directory.
 
 > **Note**: Some modules may require additional dependencies. Please consult the README files inside each respective subdirectory for detailed instructions.
 
@@ -94,11 +98,12 @@ To build the FedTree library, refer to the instructions in the [FedTree](fl_syst
 Use the following command to execute a complete experiment:
 
 ```bash
-./run_all.sh <max_depth> <dataset_name>
+./run.sh <num_clients> <max_depth> <dataset_name>
 ```
 
 Where:
 
+- `<num_clients>` is the number of clients in the federated learning setting.
 - `<max_depth>` is the maximum depth of trees used in training.
 - `<dataset_name>` is the dataset you wish to use (e.g., `stroke`, `diabetes`).
 
@@ -132,7 +137,7 @@ To run experiments with a custom dataset, follow these steps:
    Use the provided script to execute your experiment:
 
    ```bash
-   ./run_clients.sh <num_clients> <max_depth> <your_dataset_name>
+   ./run.sh <num_clients> <max_depth> <your_dataset_name>
    ```
 
 ---

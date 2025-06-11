@@ -7,7 +7,7 @@ import pandas as pd
 import xgboost as xgb
 
 from experiments.tree_based_utils import extract_categorical_features, create_log, extract_numerical_features
-from xgboost_reconstruction import XGBoostInfo, Experiment
+from xgboost_reconstruction import XGBoostInfo, Attack
 
 
 def fedxgbllr_attack(log_path: str, args: dict, data: list, data_config: dict,
@@ -45,7 +45,7 @@ def _attack(log_path: str, args, victim_cls: xgb.XGBClassifier, victim_cid: int,
     nClients = len(data)
     thresholds = [10000]
 
-    experiment = Experiment(
+    experiment = Attack(
         data=x,
         target=y,
         fn=fn,

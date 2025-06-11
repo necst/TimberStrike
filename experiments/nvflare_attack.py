@@ -6,7 +6,7 @@ import pandas as pd
 import xgboost as xgb
 
 from experiments.tree_based_utils import create_log, extract_categorical_features, extract_numerical_features
-from xgboost_reconstruction import Experiment
+from xgboost_reconstruction import Attack
 
 
 def nvflare_attack(log_path: str, args: dict, data: list, data_config: dict, force_attack: bool = False):
@@ -33,7 +33,7 @@ def nvflare_attack(log_path: str, args: dict, data: list, data_config: dict, for
 
         print(f"x.shape: {x.shape}, y.shape: {y.shape}")
 
-        experiment = Experiment(
+        experiment = Attack(
             data=x,
             target=y,
             fn=fn,
