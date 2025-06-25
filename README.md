@@ -55,7 +55,7 @@ docker run --rm \
   timberstrike ./run.sh
 ```
 
-This command mounts the local `results/` directory into the container and executes the `run_stroke.sh` experiment script.
+This command mounts the local `results/` directory into the container and executes the `run.sh` experiment script.
 
 ---
 
